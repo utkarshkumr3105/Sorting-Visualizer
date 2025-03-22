@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script> <!-- Add particles.js -->
+</head>
+<body>
+    <!-- Particles.js container -->
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <h1>Sorting Visualizer</h1>
+        
+        <!-- Dropdown for selecting sorting algorithm -->
+        <label for="algorithm-select">Select Sorting Algorithm:</label>
+        <select id="algorithm-select">
+            <option value="bubble">Bubble Sort</option>
+            <option value="quick">Quick Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="insertion">Insertion Sort</option>
+        </select>
+        
+        <!-- Controls for array size and speed -->
+        <label for="size-slider">Array Size:</label>
+        <input type="range" id="size-slider" min="10" max="200" value="100">
+        <span id="size-value">100</span>
+        
+        <label for="speed-slider">Speed:</label>
+        <input type="range" id="speed-slider" min="1" max="100" value="50">
+        <span id="speed-value">50</span>
+        
+        <!-- Buttons -->
+        <div class="button-container">
+            <button id="generate-btn">Generate Random Array</button>
+            <button id="sort-btn">Start Sorting</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+
+        <!-- Display array of numbers -->
+        <div id="array-display">
+            <h3>Array:</h3>
+            <p id="array-content"></p>
+        </div>
+
+        <!-- Canvas for sorting visualization -->
+        <canvas id="sorting-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
